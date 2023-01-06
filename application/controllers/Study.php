@@ -88,19 +88,19 @@
 
 
 //constructor and destructor method
-// class abc{
-// public function __destruct(){
-// echo "This is destruct function";
-// }
-// public function __construct(){
-// echo "This is construction function";
-// }
-// public function hello(){
-// echo "Hello Everyone";
-// }
-// }
+class abc{
+	public function __destruct(){
+		echo "This is destruct function";
+	}
+	public function __construct(){
+		echo "This is construction function";
+	}
+	public function hello(){
+		echo "Hello Everyone";
+	}
+}
 
-// $test= new abc();
+ //$test= new abc();
 
 //Abstract Class
 // abstract class parentClass{

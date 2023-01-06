@@ -111,6 +111,7 @@ $config['rest_realm'] = 'REST API';
 |
 */
 $config['rest_auth'] = false;
+//$config['rest_auth'] = 'basic';
 
 /*
 |--------------------------------------------------------------------------
@@ -126,7 +127,8 @@ $config['rest_auth'] = false;
 | Note: If 'rest_auth' is set to 'session' then change 'auth_source' to the name of the session variable
 |
 */
-$config['auth_source'] = 'ldap';
+//$config['auth_source'] = 'ldap';
+$config['auth_source'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -210,7 +212,7 @@ $config['auth_library_function'] = '';
 | Array of usernames and passwords for login, if ldap is configured this is ignored
 |
 */
-$config['rest_valid_logins'] = ['admin' => '1234'];
+$config['rest_valid_logins'] = ['admin' => '12345'];
 
 /*
 |--------------------------------------------------------------------------
@@ -298,7 +300,7 @@ $config['rest_database_group'] = 'default';
 | The table name in your database that stores API keys
 |
 */
-$config['rest_keys_table'] = 'keys';
+$config['rest_keys_table'] = 'api_keys';
 
 /*
 |--------------------------------------------------------------------------
@@ -323,7 +325,7 @@ $config['rest_keys_table'] = 'keys';
 |   ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = false;
+$config['rest_enable_keys'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -334,7 +336,7 @@ $config['rest_enable_keys'] = false;
 | column name to match e.g. my_key
 |
 */
-$config['rest_key_column'] = 'key';
+$config['rest_key_column'] = 'my_key';
 
 /*
 |--------------------------------------------------------------------------
