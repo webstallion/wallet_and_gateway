@@ -19,4 +19,12 @@ class Interview extends CI_Controller {
 		$data10=$this->gen_model->get_all_data10();
 		dump($data10);
 	}
+	public function austerpvt(){
+		// if(2=='2'){
+		// 	echo 'true';
+		// }else{
+		// 	echo 'false';
+		// }
+	}
+ 
 }

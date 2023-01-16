@@ -54,7 +54,11 @@
 			$data=$this->db->query("SELECT SUM(`salary`) as Salary FROM `employee` GROUP BY `deptID`");
 			return $data->result();
 		}
-
+		public function delete_user($table, $del_id){
+			$this->db->where('id', $del_id);
+    	$this->db->delete($table);
+    	return true;
+		}
 		public function get_all_data3(){
 			$data=$this->db->query("SELECT deptID, SUM(`salary`) FROM `employee` GROUP BY `deptID`");
 			return $data->result();

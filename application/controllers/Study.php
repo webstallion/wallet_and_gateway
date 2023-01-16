@@ -92,15 +92,16 @@ class abc{
 	public function __destruct(){
 		echo "This is destruct function";
 	}
+
 	public function __construct(){
-		echo "This is construction function";
+		echo "This is construction function 2";
 	}
 	public function hello(){
 		echo "Hello Everyone";
 	}
 }
 
- //$test= new abc();
+ $test= new abc();
 
 //Abstract Class
 // abstract class parentClass{
@@ -265,22 +266,22 @@ class abc{
 // $test->sayhello();
 // $test->saybye();
 
-trait hello{
-	public function sayhello(){
-		echo "Hello evrone<br>";
-	}
+// trait hello{
+// 	public function sayhello(){
+// 		echo "Hello evrone<br>";
+// 	}
 
-	public function sayHii(){
-		echo "Hii evrone";
-	}
-}
+// 	public function sayHii(){
+// 		echo "Hii evrone";
+// 	}
+// }
 
-class base{
-	use hello;
-}
+// class base{
+// 	use hello;
+// }
 
-$test= new base();
-$test->sayhello();
-$test->sayHii();
+// $test= new base();
+// $test->sayhello();
+// $test->sayHii();
 
 ?>

@@ -10,8 +10,6 @@ class Test_api extends RestController {
 	}
 
 	public function index(){
-		echo "i am restfull api";
-		die();
 		$this->load->view('api_view');
 	}
 
@@ -30,7 +28,6 @@ class Test_api extends RestController {
 		$response=curl_exec($client);
 		curl_close($client);
 		$result=json_decode($response);
-		echo $response; die();
 		$this->data['output']=$result;
 		$this->load->view('api_view2', $this->data);
 	}
