@@ -88,20 +88,20 @@
 
 
 //constructor and destructor method
-class abc{
-	public function __destruct(){
-		echo "This is destruct function";
-	}
+// class abc{
+// 	public function __destruct(){
+// 		echo "This is destruct function";
+// 	}
 
-	public function __construct(){
-		echo "This is construction function 2";
-	}
-	public function hello(){
-		echo "Hello Everyone";
-	}
-}
+// 	public function __construct(){
+// 		echo "This is construction function 2";
+// 	}
+// 	public function hello(){
+// 		echo "Hello Everyone";
+// 	}
+// }
 
- $test= new abc();
+// $test= new abc();
 
 //Abstract Class
 // abstract class parentClass{
@@ -177,37 +177,37 @@ class abc{
 
 //Encapsulation
 // class abc{
-// private $name;
-// public function showName($newName){
-// $this->name = $newName;
-// return $this->name;
-// }
+// 	private $name;
+// 	public function showName($newName){
+// 		$this->name = $newName;
+// 		return $this->name;
+// 	}
 // }
 // //instantiate object
 // $obj = new abc();
 // echo $obj->showName("Jeewak kumar");
-// }
+//}
 
 
 // Polymorphism
-// abstract class class1{
-// abstract function fun1();
-// }
+abstract class class1{
+	abstract function fun1();
+}
 
-// class class2 extends class1{
-// function fun1(){
-// echo "Fun1";
-// }
-// }
+class class2 extends class1{
+	function fun1(){
+		echo "Fun1";
+	}
+}
 
-// class class3 extends class1{
-// function fun1(){
-// echo "Fun2";
-// }
-// }
+class class3 extends class1{
+	function fun1(){
+		echo "Fun2";
+	}
+}
 
-// $obj=new class3();
-// $obj->fun1();
+$obj=new class3();
+$obj->fun1();
 
 // interface class1{
 // function fun1();
@@ -284,4 +284,18 @@ class abc{
 // $test->sayhello();
 // $test->sayHii();
 
+
+// strstr() returns part of a given string from the first occurrence of a given substring to the end of the string. For example: strstr("user@example.com","@") will return "@example.com".
+// stristr() is idential to strstr() except that it is case insensitive.
+
+// $lastname = 'Singh';
+// $string = "This is pankaj kumar.";
+// $string = ereg_replace('kumar', $lastname, $string);
+// echo $string;   
+
+
+// func_num_args() function returns the number of parameters passed in.
+
+// echo substr("Hello world",7);
+// orld output
 ?>
