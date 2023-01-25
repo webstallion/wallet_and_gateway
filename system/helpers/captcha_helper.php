@@ -95,11 +95,11 @@ if ( ! function_exists('create_captcha'))
 			}
 		}
 
-		if ( ! extension_loaded('gd'))
-		{
-			log_message('error', 'create_captcha(): GD extension is not loaded.');
-			return FALSE;
-		}
+		// if ( ! extension_loaded('gd'))
+		// {
+		// 	log_message('error', 'create_captcha(): GD extension is not loaded.');
+		// 	return FALSE;
+		// }
 
 		if ($img_path === '' OR $img_url === '')
 		{

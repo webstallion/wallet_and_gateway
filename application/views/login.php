@@ -786,25 +786,20 @@ input.checkbox:checked:after {
 <body>
   <!-- main -->
   <div class="main-w3layouts wrapper">
-    <h1>SignUp User</h1>
+    <h1>Login User</h1>
     <div class="main-agileinfo">
       <div class="agileits-top">
+        <?php if(isset($error)){ ?><p style="color: red;background: white;"><?= $error; ?></p><?php } ?>
         <form method="post">
-          <input class="text" type="text" name="name" placeholder="Name" value="<?= $inputarray['name']; ?>">
-          <p style="color:red !important;"><?php echo form_error('name'); ?></p>
-
-          <input class="text w3lpass" type="text" name="username" value="<?= $inputarray['username']; ?>" placeholder="Username">
+          <input class="text w3lpass" type="text" name="username" value="<?php if($this->input->cookie('username') != null){ echo $this->input->cookie('username'); } ?>" placeholder="Username">
           <p style="color:red !important;"><?php echo form_error('username'); ?></p>
-
-          <input class="text email" type="email" name="email" value="<?= $inputarray['email']; ?>" placeholder="Email" required="">
-          <p style="color:red !important;"><?php echo form_error('email'); ?></p>
-          <input class="text" type="password" name="password" value="<?= $inputarray['password']; ?>" placeholder="Password">
+          <input class="text" type="password" name="password" value="<?php if($this->input->cookie('password') != null){ echo $this->input->cookie('password'); } ?>" placeholder="Password">
           <p style="color:red !important;"><?php echo form_error('password'); ?></p>
-          <input class="text w3lpass" type="password" name="confirm_pswd" value="<?= $inputarray['confirm_pswd']; ?>" placeholder="Confirm Password">
-          <p style="color:red !important;"><?php echo form_error('confirm_pswd'); ?></p> 
-          <input type="submit" value="SIGNUP">
+          <br>
+          <input type="checkbox" name="remember_me" value="remember me">&nbsp;<span>Remember me</span>
+          <input type="submit" value="Login">
         </form>
-        <p>You have an Account? <a href="<?= base_url('Login'); ?>"> Login Now!</a></p>
+        <p>Don't have an Account? <a href="#"> Signup!</a></p>
       </div>
     </div>
     <!-- copyright -->
@@ -813,6 +808,5 @@ input.checkbox:checked:after {
     </div>
 
   </div>
-  <!-- //main -->
 </body>
 </html>
